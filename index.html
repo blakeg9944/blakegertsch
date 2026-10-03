@@ -340,6 +340,43 @@
       transform: translateX(4px);
     }
 
+    .project-card.featured {
+      border-color: var(--accent-dim);
+      background: linear-gradient(135deg, rgba(184,224,74,0.07), var(--card) 55%);
+    }
+
+    .award {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem 0.75rem;
+      margin-bottom: 1rem;
+    }
+
+    .award-badge {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--bg);
+      background: var(--accent);
+      padding: 0.3rem 0.7rem;
+      border-radius: 3px;
+    }
+
+    .award-sponsors {
+      font-family: var(--mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+    }
+
+    .award-sponsors strong {
+      color: var(--text);
+      font-weight: 500;
+    }
+
     .project-card-tag {
       font-family: var(--mono);
       font-size: 0.7rem;
@@ -631,6 +668,10 @@
           <div class="stat-num">2+</div>
           <div class="stat-label">Years Leading</div>
         </div>
+        <div class="stat">
+          <div class="stat-num">$2K</div>
+          <div class="stat-label">Hackathon Prize</div>
+        </div>
       </div>
     </div>
   </div>
@@ -704,6 +745,44 @@
       <span class="section-num">02</span>
       <h2 class="section-title">Projects</h2>
       <div class="section-line"></div>
+    </div>
+
+    <div class="project-card featured">
+      <div>
+        <div class="award">
+          <span class="award-badge">🏆 1st Place · Homecoming Hackathon · $2,000 Prize</span>
+          <span class="award-sponsors">Sponsored by <strong>Neighbor</strong>, <strong>Redo</strong> &amp; <strong>Waystar</strong></span>
+        </div>
+        <div class="project-card-tag">// Oct 2026 · Hackathon · 6-Hour Team Build</div>
+        <h3>trimdcv</h3>
+        <p>
+          An AI resume tailor that took 1st place and the $2,000 prize at the Homecoming Hackathon. Upload your resume
+          once and it's split into a bank of reusable "tiles"; paste a job link (or click the Chrome
+          extension on a posting) and it picks your best-matching experience and generates a tailored
+          one-page PDF. The extension can even fill out the application for you. Built and shipped live
+          with a 4-person team in 6 hours. I built the OpenAI pipeline that parses resumes, summarizes job
+          postings, selects the best tiles per role, and maps profile data onto application form fields, plus
+          the ReportLab PDF engine with multiple templates and one-page auto-fit, and deployed it all on AWS
+          (Amplify frontend, Lightsail + Caddy API, GitHub Actions auto-deploy).
+        </p>
+        <div class="tag-list" style="margin-top:1rem;">
+          <span class="tag">OpenAI API</span>
+          <span class="tag">FastAPI</span>
+          <span class="tag">React</span>
+          <span class="tag">Supabase</span>
+          <span class="tag">ReportLab</span>
+          <span class="tag">AWS</span>
+          <span class="tag">Chrome Extension</span>
+        </div>
+      </div>
+      <div class="project-links">
+        <a href="https://trimdcv.com" class="project-link" target="_blank">
+          ↗ Live Site
+        </a>
+        <a href="https://github.com/blakeg9944/Neighbor-Hackathon" class="project-link" target="_blank">
+          ↗ GitHub
+        </a>
+      </div>
     </div>
 
     <div class="project-card">
@@ -842,6 +921,19 @@
     </div>
 
     <div class="timeline">
+      <div class="timeline-item">
+        <div class="timeline-date">Sep 2026 – Present</div>
+        <div class="timeline-role">Software & AI Engineer</div>
+        <div class="timeline-org">Certified AI Partners · Early-Stage AI Engineering Company</div>
+        <ul>
+          <li>Own the backend of an AI bid-estimation system for a construction client: a plan-set PDF goes in, and it extracts the values that drive pricing with page-level evidence, fills the client's approved pricing workbook, and returns a model price with a full audit trail</li>
+          <li>Built vision-model extraction with page triage and tiled region detection, sending low-confidence or conflicting values to human review instead of guessing</li>
+          <li>Built a bid comparison tool and per-job scorecard that check the system against historical approved bids and classify every mismatch</li>
+          <li>Merged 9 pull requests in my first month under senior technical review, including security fixes that keep raw model and provider output out of shareable audit logs and stop a single bad request from taking down a client app</li>
+          <li>Build AI-powered automations, agents, integrations, and knowledge-base tooling for the company and its clients</li>
+        </ul>
+      </div>
+
       <div class="timeline-item">
         <div class="timeline-date">May 2026 – Present</div>
         <div class="timeline-role">Research Software Developer</div>
